@@ -1,0 +1,14 @@
+local targets = {}
+getgenv().stack = true
+
+local function loopbring(player, on_off_value)
+    table.insert(targets, player)
+    for i, v in ipairs(targets) do
+        print(v)
+    end
+    if on_off_value == true then
+        getgenv().stack = true
+    elseif on_off_value == false then
+        getgenv().stack = false
+    end
+end
